@@ -64,7 +64,7 @@ export default function HeroSection() {
       `}</style>
 
       <div className={`w-full min-h-[80vh] md:min-h-screen bg-white flex flex-col p-2 md:p-[22px] [font-family:'Inter',system-ui,sans-serif] transition-opacity duration-700 ease-in ${vis ? "opacity-100" : "opacity-0"}`}>
-        <div className="relative flex-1 overflow-hidden rounded-[16px] md:rounded-[15px] border border-[#474B4F] bg-[#222629] min-h-[calc(80vh-16px)] md:min-h-[calc(100vh-44px)]">
+        <div className="relative flex-1 overflow-hidden rounded-[10px] md:rounded-[10px] border border-[#474B4F] bg-[#222629] min-h-[calc(80vh-16px)] md:min-h-[calc(100vh-44px)]">
           {SLIDES.map((bg, i) => (
             <div key={i} className={`bg-slide ${i === current ? "active" : ""}`} style={{ backgroundImage: `url(${bg})` }} />
           ))}

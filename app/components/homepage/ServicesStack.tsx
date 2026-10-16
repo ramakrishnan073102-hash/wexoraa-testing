@@ -202,7 +202,7 @@ export default function ServiceSection() {
                   className="
                     group
                     w-full max-w-[1200px]
-                    rounded-[24px] md:rounded-[10px]
+                    rounded-[10px] md:rounded-[10px]
                     shadow-[0_15px_50px_rgba(0,0,0,0.15)]
                     overflow-hidden
                     grid grid-cols-1 lg:grid-cols-[55%_45%]

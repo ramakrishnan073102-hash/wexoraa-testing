@@ -190,10 +190,10 @@ export default function Navbar(): React.ReactElement {
                       {/* DROPDOWN MENU */}
                       {hasDD && (
                         <div className={`absolute top-full left-0 min-w-[240px] z-[200] pt-4 origin-top transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${isOpen ? "opacity-100 visible pointer-events-auto translate-y-0 scale-100" : "opacity-0 invisible pointer-events-none translate-y-2 scale-95"}`} onMouseEnter={cancelClose} onMouseLeave={scheduleClose}>
-                          <div className="bg-[#222629] border border-white/10 rounded-[16px] p-2 shadow-[0_24px_64px_rgba(0,0,0,0.5)]">
+                          <div className="bg-[#222629] border border-white/10 rounded-[10px] p-2 shadow-[0_24px_64px_rgba(0,0,0,0.5)]">
                             {item.children!.map((child, idx) => (
                               <div key={child.label}>
-                                <Link href={child.href} onClick={() => setActiveMenu(null)} className="group flex items-center justify-between px-3.5 py-3 rounded-[12px] text-[0.875rem] font-bold text-white/70 hover:text-white hover:bg-white/5 transition-all duration-200 whitespace-nowrap cursor-pointer select-none focus:outline-none">
+                                <Link href={child.href} onClick={() => setActiveMenu(null)} className="group flex items-center justify-between px-3.5 py-3 rounded-[10px] text-[0.875rem] font-bold text-white/70 hover:text-white hover:bg-white/5 transition-all duration-200 whitespace-nowrap cursor-pointer select-none focus:outline-none">
                                   <span className="flex items-center gap-2.5">
                                     <span className="w-1.5 h-1.5 rounded-full bg-[#86C232] opacity-0 flex-shrink-0 scale-50 transition-all duration-200 group-hover:opacity-100 group-hover:scale-100" />
                                     {child.label}

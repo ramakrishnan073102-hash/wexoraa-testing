@@ -72,7 +72,7 @@ export default function OurProcessSection(): React.ReactElement {
       
       {/* ── CLEAN MODERN BACKGROUND ── */}
       <div 
-        className="w-full relative overflow-hidden rounded-[24px] py-20 md:py-32 px-6 bg-[#F8FAF8] border border-[#86C232]/10 shadow-[0_8px_40px_rgba(0,0,0,0.03)]"
+        className="w-full relative overflow-hidden rounded-[10px] py-20 md:py-32 px-6 bg-[#F8FAF8] border border-[#86C232]/10 shadow-[0_8px_40px_rgba(0,0,0,0.03)]"
       >
         
         {/* Ambient Glow behind everything */}
