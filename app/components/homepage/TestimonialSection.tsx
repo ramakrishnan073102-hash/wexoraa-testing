@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Star, Quote, ArrowRight, ArrowUpRight } from "lucide-react";
+import { Star, Quote, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -67,22 +67,22 @@ export default function TestimonialStickySection(): React.ReactElement {
                 </div>
               </div>
 
-              {/* Pill Button with Clean Single-Line Rolling Text & Arrow Rotation Animation */}
+              {/* Pill Button mirroring the "Let's Connect" layout exactly */}
               <Link
                 href="/portfolio"
                 className="group inline-flex items-center justify-between bg-[#86C232] text-[#222629] rounded-full pl-7 pr-2 py-2 font-extrabold text-[15px] transition-all duration-300 select-none"
               >
-                {/* Single-line rolling text container */}
-                <span className="relative inline-block h-[22px] overflow-hidden mr-6">
-                  <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full leading-[22px]">
-                    <span className="block whitespace-nowrap">View Portfolio</span>
-                    
-                  </span>
-                </span>
+                {/* Bulletproof rolling text container */}
+                <div className="relative h-[24px] overflow-hidden mr-4">
+                  <div className="flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-y-1/2">
+                    <span className="h-[24px] flex items-center whitespace-nowrap tracking-tight">View Portfolio</span>
+                    <span className="h-[24px] flex items-center whitespace-nowrap tracking-tight">View Portfolio</span>
+                  </div>
+                </div>
 
-                {/* Dark Circular Arrow Container */}
+                {/* Dark Circular Arrow Container (Diagonal -> Horizontal) */}
                 <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#222629] text-[#86C232] transition-transform duration-300 group-hover:scale-105">
-                  <ArrowUpRight size={20} strokeWidth={2.5} className="transition-transform duration-300 group-hover:rotate-45" />
+                  <ArrowUpRight size={20} strokeWidth={2.5} className="transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:rotate-45" />
                 </span>
               </Link>
               

@@ -41,7 +41,8 @@ export default function MarqueeSection(): React.ReactElement {
 
       <section
         className={[
-          "relative w-full py-20 md:py-[120px] overflow-hidden",
+          // Reduced top and bottom padding significantly from py-20/md:py-[120px] to py-8/md:py-12
+          "relative w-full py-8 md:py-12 overflow-hidden",
           "bg-[#ffffff] flex items-center justify-center",
           "font-['Manrope',sans-serif]",
           /* Left & Right fade edges */
@@ -60,8 +61,9 @@ export default function MarqueeSection(): React.ReactElement {
             <div
               key={index}
               className={[
-                "flex-shrink-0 min-w-[150px] md:min-w-[180px] px-4 md:px-6 h-[75px] md:h-[85px] mr-4 md:mr-6",
-                "flex items-center justify-center gap-3 md:gap-4",
+                // Removed the fixed min-width and reduced padding/margins so items sit closer together
+                "flex-shrink-0 px-3 md:px-5 h-[50px] md:h-[60px] mr-2 md:mr-4",
+                "flex items-center justify-center gap-2 md:gap-3",
                 "transition-all duration-300 ease-in-out group cursor-default",
               ].join(" ")}
             >
@@ -70,7 +72,7 @@ export default function MarqueeSection(): React.ReactElement {
                 alt={`${tech.name} logo`} 
                 className="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-110 transition-transform duration-300 ease-out" 
               />
-              <span className="text-[#474B4F] text-[1rem] md:text-[1.15rem] font-bold tracking-[0.03em] group-hover:text-[#86C232] transition-colors duration-300">
+              <span className="text-[#474B4F] text-[1rem] md:text-[1.15rem] font-bold tracking-[0.03em] group-hover:text-[#86C232] transition-colors duration-300 whitespace-nowrap">
                 {tech.name}
               </span>
             </div>

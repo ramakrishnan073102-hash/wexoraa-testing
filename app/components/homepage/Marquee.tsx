@@ -5,7 +5,6 @@ import React from "react";
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const CLIENT_LOGOS = Array.from({ length: 17 }, (_, index) => {
   const number = index + 1;
-  // Updated to include 14 as a .jpeg
   const extension = [13, 14, 15].includes(number) ? "jpeg" : "png";
   return {
     name: `Client logo ${number}`,
@@ -24,8 +23,8 @@ export default function ClientMarqueeSection(): React.ReactElement {
           100% { transform: translateX(-50%); }
         }
         .marquee-track {
-          /* Increased from 40s to 80s to significantly slow down the scroll speed */
-          animation: marquee-scroll 80s linear infinite;
+          /* Increased from 80s to 130s to make the scrolling significantly slower and smoother */
+          animation: marquee-scroll 130s linear infinite;
         }
         /* Pause on hover */
         .marquee-track:hover {
@@ -56,17 +55,15 @@ export default function ClientMarqueeSection(): React.ReactElement {
           ].join(" ")}
         >
           {/* ── Scrolling track ── */}
-          {/* Added gap-12 md:gap-20 here to ensure strict, uniform spacing between flex items */}
           <div className="marquee-track flex w-max relative z-[1] gap-2 md:gap-2">
             {/* Duplicating the array multiple times ensures a flawless loop on wide screens */}
             {[...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS].map((logo, index) => (
               <div
                 key={index}
                 className={[
-                  // Removed margins and padding, using fixed width instead of min-width for perfect uniformity
                   "flex-shrink-0 w-[140px] md:w-[180px] h-[90px] md:h-[100px]",
                   "flex items-center justify-center",
-                  "transition-all duration-300 ease-in-out group cursor-pointer",
+                  "transition-all duration-250 ease-in-out group cursor-pointer",
                 ].join(" ")}
               >
                 <img 

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Phone, Mail, ArrowRight, ArrowUp } from "lucide-react";
+import { Phone, Mail, ArrowUpRight, ArrowUp } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 // --- DATA ---
@@ -77,13 +77,23 @@ export default function Footer(): React.ReactElement {
               <h2 className="text-[#222629] text-[2.5rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] font-black leading-[1.1] tracking-tight max-w-[1000px] mx-auto mb-8 md:mb-10 select-none cursor-default">
                 Let&apos;s <span className="text-[#86C232]">Build</span> Future<br className="hidden sm:block" /> Together
               </h2>
-              <Link href="/contact" className="group inline-flex items-center bg-[#222629] hover:bg-[#86C232] rounded-full transition-colors duration-300 shadow-md pr-2 pl-6 sm:pl-8 py-2 sm:py-2.5 select-none outline-none focus:outline-none">
-                <span className="relative block overflow-hidden font-extrabold text-[1rem] sm:text-[1.1rem] lg:text-[1.2rem] text-white group-hover:text-[#222629] mr-4 sm:mr-6 tracking-wide h-[1.3em]">
-                  <span className="block transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-y-full">Get in Touch</span>
-                  <span className="absolute top-full left-0 block transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-y-full">Get in Touch</span>
-                </span>
-                <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 group-hover:bg-[#222629] text-white group-hover:text-[#86C232] transition-colors duration-300 shrink-0">
-                  <ArrowRight size={20} strokeWidth={2.5} className="transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] -rotate-45 group-hover:rotate-0" />
+              
+              {/* Updated Button matching your reference image (Green background, dark text/arrow container) */}
+              <Link
+                href="/contact"
+                className="group inline-flex items-center justify-between bg-[#86C232] text-[#222629] rounded-full pl-7 sm:pl-8 pr-2 py-2 sm:py-2.5 font-extrabold text-[15px] sm:text-[1.1rem] transition-all duration-300 select-none shadow-md"
+              >
+                {/* Bulletproof rolling text container */}
+                <div className="relative h-[24px] sm:h-[28px] overflow-hidden mr-4 sm:mr-6">
+                  <div className="flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-y-1/2">
+                    <span className="h-[24px] sm:h-[28px] flex items-center whitespace-nowrap tracking-wide">Grow Your Business</span>
+                    <span className="h-[24px] sm:h-[28px] flex items-center whitespace-nowrap tracking-wide">Grow Your Business</span>
+                  </div>
+                </div>
+
+                {/* Dark Circular Arrow Container (Diagonal -> Horizontal) */}
+                <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#222629] text-[#86C232] transition-transform duration-300 group-hover:scale-105 shrink-0">
+                  <ArrowUpRight size={20} strokeWidth={2.5} className="transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:rotate-45" />
                 </span>
               </Link>
             </div>
