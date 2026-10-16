@@ -36,7 +36,7 @@ const SOCIALS = [
 ];
 
 const CONTACTS = [
-  { icon: Phone, text: "STV Nagar, Nava India Peelamedu, Coimbatore - 641004", href: "#" },
+  { icon: Phone, text: "STV Nagar, Nava India,  Peelamedu, Coimbatore - 641004", href: "#" },
   { icon: Mail, text: "info@wexoraa.com", href: "mailto:info@wexoraa.com" },
 ];
 

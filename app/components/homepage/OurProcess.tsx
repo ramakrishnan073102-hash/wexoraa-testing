@@ -94,7 +94,7 @@ export default function OurProcessSection(): React.ReactElement {
             </motion.div>
             
             <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-[#222629] leading-[1.2] tracking-tight max-w-3xl mx-auto">
-              <LetterScrollAnimation text="From Idea to Impact." />
+              <LetterScrollAnimation text=" Idea to Impact." />
             </h2>
           </div>
           

@@ -25,7 +25,7 @@ const services = [
     number: "02",
     title: "UI/UX Design",
     desc: "Thoughtful design that turns every click into a better experience.",
-    bg: "#20242b",
+    bg: "#1b1b1f",
     icon: Paintbrush,
     image: "/assets/img/ourservices/uiux.jpeg",
   },
@@ -33,7 +33,7 @@ const services = [
     number: "03",
     title: "Custom Software",
     desc: "Custom-built solutions that simplify, automate, and scale your business.",
-    bg: "#262220",
+    bg: "#1b1b1f",
     icon: Settings,
     image: "/assets/img/ourservices/crm.jpeg",
   },
@@ -41,7 +41,7 @@ const services = [
     number: "04",
     title: "Mobile Apps",
     desc: "Powerful, user-friendly mobile apps built to connect with customers and grow your business.",
-    bg: "#1f2622",
+    bg: "#1b1b1f",
     icon: Smartphone,
     image: "/assets/img/ourservices/mobileapp.jpeg",
   },
@@ -49,7 +49,7 @@ const services = [
     number: "05",
     title: "Digital Marketing",
     desc: "SEO, social media marketing and performance marketing built to reach, engage, and convert.",
-    bg: "#221f26",
+    bg: "#1b1b1f",
     icon: TrendingUp,
     image: "/assets/img/ourservices/digital.jpeg",
   },
@@ -57,7 +57,7 @@ const services = [
     number: "06",
     title: "AI Solutions",
     desc: "Smarter automation and AI-powered solutions designed to save time, simplify operations, and accelerate business growth.",
-    bg: "#1a2226",
+    bg: "#1b1b1f",
     icon: Bot,
     image: "/assets/img/ourservices/ai.jpeg",
   },
@@ -148,7 +148,7 @@ export default function ServiceSection() {
         </span>
 
         <h2 className="text-[#222629] text-4xl md:text-5xl lg:text-[4rem] font-extrabold tracking-tight max-w-4xl leading-[1.1]">
-         From Ideas to Digital Growth
+         Ideas to Digital Growth
         </h2>
       </div>
 
@@ -177,7 +177,7 @@ export default function ServiceSection() {
               opacity = 0.9;
             } else if (progress >= end) {
               y = index * 1.8;
-              scale = 1 - index * 0.008;
+              scale = 1 - (index * 0.008);
             } else {
               const local = (progress - start) / (end - start);
               const ease = 1 - Math.pow(1 - local, 3);
@@ -243,7 +243,7 @@ export default function ServiceSection() {
                     </Link>
                   </div>
 
-                  {/* Right: Image Side (Updated for perfect centering) */}
+                  {/* Right: Image Side */}
                   <div className="relative h-[250px] sm:h-[350px] lg:h-full overflow-hidden border-t lg:border-t-0 lg:border-l border-white/5 bg-[#111]">
                     <img
                       src={service.image}
