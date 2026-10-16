@@ -5,6 +5,7 @@ import ServiceSection from "./components/homepage/ServicesStack";
 import OurProcess from "./components/homepage/OurProcess";
 import ChooseBest from "./components/homepage/ChooseTheBest";
 import TestimonialSection from "./components/homepage/TestimonialSection";
+import TechStack from "./components/homepage/TechStack"
 import Whywexoraa from "./components/homepage/Whywexoraa";
 
 export default function Home() {
@@ -18,10 +19,11 @@ export default function Home() {
       </div>
       <OurProcess />
       <Whywexoraa />
-      
-      
+
       <ChooseBest />
       <TestimonialSection />
+      <TechStack />
+
     </>
   );
 }

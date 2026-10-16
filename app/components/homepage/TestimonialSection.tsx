@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Star, Quote, ArrowUpRight } from "lucide-react";
+import { Star, Quote, ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -42,7 +42,7 @@ export default function TestimonialStickySection(): React.ReactElement {
           <div className="lg:w-5/12 flex flex-col items-start relative">
             <div className="lg:sticky lg:top-32 flex flex-col items-start">
               
-              <span className="inline-block text-[#86C232] border border-[#86C232]/80 bg-[#86C232]/10 px-[14px] py-[4px] rounded-[4px] text-[12px] md:text-[14px] font-extrabold tracking-[0.2em] uppercase mb-6 select-none">
+              <span className="inline-block text-[#86C232] border border-[#86C232]/80 bg-[#86C232]/10 px-[14px] py-[4px] rounded-[10px] text-[12px] md:text-[14px] font-extrabold tracking-[0.2em] uppercase mb-6 select-none">
                 Client Stories
               </span>
               
@@ -67,18 +67,18 @@ export default function TestimonialStickySection(): React.ReactElement {
                 </div>
               </div>
 
-              {/* Pill Button with Vertical Rolling Text & Arrow Rotation Animation */}
+              {/* Pill Button with Clean Single-Line Rolling Text & Arrow Rotation Animation */}
               <Link
                 href="/portfolio"
-                className="group inline-flex items-center justify-between bg-[#86C232] text-[#222629] rounded-full pl-7 pr-2 py-2 font-extrabold text-[15px] transition-all duration-300 select-none overflow-hidden"
+                className="group inline-flex items-center justify-between bg-[#86C232] text-[#222629] rounded-full pl-7 pr-2 py-2 font-extrabold text-[15px] transition-all duration-300 select-none"
               >
-                {/* Rolling Text Container */}
-                <div className="relative h-[24px] overflow-hidden mr-6 flex items-center">
-                  <div className="flex flex-col transition-transform duration-500 ease-in-out group-hover:-translate-y-[24px]">
-                    <span className="h-[24px] flex items-center tracking-tight whitespace-nowrap">View Portfolio</span>
-                    <span className="h-[24px] flex items-center tracking-tight whitespace-nowrap text-[#222629]">View Portfolio</span>
-                  </div>
-                </div>
+                {/* Single-line rolling text container */}
+                <span className="relative inline-block h-[22px] overflow-hidden mr-6">
+                  <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full leading-[22px]">
+                    <span className="block whitespace-nowrap">View Portfolio</span>
+                    
+                  </span>
+                </span>
 
                 {/* Dark Circular Arrow Container */}
                 <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#222629] text-[#86C232] transition-transform duration-300 group-hover:scale-105">
