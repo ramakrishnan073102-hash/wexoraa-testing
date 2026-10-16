@@ -22,21 +22,21 @@ const CONTACT_INFO = [
     id: 1,
     title: "Our Location",
     icon: MapPin,
-    details: ["993 Renner Burg, West", "Rond, MT 94251-030"],
+    details: ["SVT Nagar, Nava India, Peelamedu, Coimbatore - 641004"],
     link: null,
   },
   {
     id: 2,
     title: "Email us",
     icon: Mail,
-    details: ["support@wexoraa.com", "info@wexoraa.com"],
+    details: ["wexoraainfotech@gmail.com"],
     link: null,
   },
   {
     id: 3,
     title: "Call us",
     icon: Phone,
-    details: ["+1 (009) 544-7818", "+1 (009) 880-1810"],
+    details: ["(+91) 9360375338"],
     link: null,
   },
   {
@@ -60,7 +60,7 @@ export default function ContactPage(): React.ReactElement {
       ════════════════════════════════════════════════════ */}
       <section className="w-full pt-4 sm:pt-6 lg:pt-8 px-4 sm:px-6 lg:px-8">
         {/* The Boxy Rounded Container */}
-        <div className="relative w-full max-w-[1400px] mx-auto h-[320px] md:h-[200px] lg:h-[500px] rounded-[15px] md:rounded-[15px][10px] flex items-center justify-center overflow-hidden shadow-sm">
+        <div className="relative w-full max-w-[1400px] mx-auto h-[320px] md:h-[200px] lg:h-[500px] rounded-[10px] md:rounded-[10px][10px] flex items-center justify-center overflow-hidden shadow-sm">
           
           {/* Background Image & Overlay */}
           <div 

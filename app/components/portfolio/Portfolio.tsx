@@ -115,7 +115,7 @@ export default function PortfolioPage(): React.ReactElement {
          1. HERO SECTION
       ════════════════════════════════════════ */}
       <section className="w-full pt-4 sm:pt-6 lg:pt-8 px-4 sm:px-6 lg:px-8 mb-16 md:mb-20">
-        <div className="relative w-full max-w-[1400px] mx-auto h-[350px] md:h-[450px] lg:h-[500px] rounded-[10px] md:rounded-[15px] flex items-center justify-center overflow-hidden shadow-sm">
+        <div className="relative w-full max-w-[1400px] mx-auto h-[350px] md:h-[450px] lg:h-[500px] rounded-[10px] md:rounded-[10px] flex items-center justify-center overflow-hidden shadow-sm">
           <div
             className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
             style={{
@@ -174,7 +174,7 @@ export default function PortfolioPage(): React.ReactElement {
               >
                 
                 {/* LEFT: Project Showcase Image */}
-                <div className="lg:col-span-6 w-full h-[280px] sm:h-[400px] md:h-[460px] rounded-[16px] overflow-hidden bg-[#EEF3EE] border border-[#474B4F]/10 relative group shadow-sm lg:mt-8">
+                <div className="lg:col-span-6 w-full h-[280px] sm:h-[400px] md:h-[460px] rounded-[10px] overflow-hidden bg-[#EEF3EE] border border-[#474B4F]/10 relative group shadow-sm lg:mt-8">
                   <img
                     src={project.image}
                     alt={project.title}
