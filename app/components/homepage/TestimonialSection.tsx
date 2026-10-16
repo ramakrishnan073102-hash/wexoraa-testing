@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Star, Quote, ArrowRight } from "lucide-react";
+import { Star, Quote, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -24,8 +24,8 @@ const TESTIMONIALS = [
   {
     id: 3,
     quote: "Working with Wexoraa has been a game-changer for our business. Their team's professionalism, attention to detail, and innovative solutions helped us streamline operations beautifully.",
-    name: "Ayyappa Gee",
-    role: "Gee Products",
+    name: "Ayyappa Ghee",
+    role: "Ghee Products",
     logo: "/assets/img/clientslogo/14.jpeg", 
   },
 ];
@@ -33,8 +33,8 @@ const TESTIMONIALS = [
 // ─── Component ────────────────────────────────────────────────────────────────
 export default function TestimonialStickySection(): React.ReactElement {
   return (
-    <section className="relative w-full py-20 md:py-32 bg-[#F8FAF8] font-['Manrope',_sans-serif]">
-      <div className="max-w-[1300px] mx-auto px-6 md:px-12 lg:px-16">
+    <section className="w-full py-20 md:py-32 bg-[#F8FAF8] font-['Manrope',_sans-serif]">
+      <div className="max-w-[1300px] mx-auto px-6 md:px-10 lg:px-12">
         
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           
@@ -42,7 +42,7 @@ export default function TestimonialStickySection(): React.ReactElement {
           <div className="lg:w-5/12 flex flex-col items-start relative">
             <div className="lg:sticky lg:top-32 flex flex-col items-start">
               
-              <span className="inline-block text-[#86C232] border border-[#86C232]/80 bg-[#86C232]/10 px-[14px] py-[4px] rounded-[4px] text-[12px] md:text-[14px] font-extrabold tracking-[0.2em] uppercase mb-6 shadow-sm select-none">
+              <span className="inline-block text-[#86C232] border border-[#86C232]/80 bg-[#86C232]/10 px-[14px] py-[4px] rounded-[4px] text-[12px] md:text-[14px] font-extrabold tracking-[0.2em] uppercase mb-6 select-none">
                 Client Stories
               </span>
               
@@ -56,7 +56,7 @@ export default function TestimonialStickySection(): React.ReactElement {
               </p>
 
               {/* Trust Badge */}
-              <div className="flex items-center gap-4 bg-white px-6 py-4 rounded-2xl shadow-sm border border-black/5 mb-10">
+              <div className="flex items-center gap-4 bg-white px-6 py-4 rounded-[10px] border border-black/5 mb-10">
                 <div className="flex flex-col">
                   <div className="flex items-center gap-1 mb-1">
                     {[...Array(5)].map((_, i) => (
@@ -67,13 +67,22 @@ export default function TestimonialStickySection(): React.ReactElement {
                 </div>
               </div>
 
+              {/* Pill Button with Vertical Rolling Text & Arrow Rotation Animation */}
               <Link
                 href="/portfolio"
-                className="group inline-flex items-center gap-3 bg-[#222629] text-white rounded-full pl-6 pr-2 py-2 font-bold text-[15px] hover:bg-[#86C232] transition-colors duration-300 shadow-md"
+                className="group inline-flex items-center justify-between bg-[#86C232] text-[#222629] rounded-full pl-7 pr-2 py-2 font-extrabold text-[15px] transition-all duration-300 select-none overflow-hidden"
               >
-                View Portfolio
-                <span className="flex items-center justify-center w-9 h-9 rounded-full bg-white/20 text-white transition-transform duration-300 group-hover:bg-white group-hover:text-[#222629]">
-                  <ArrowRight size={18} strokeWidth={2.5} />
+                {/* Rolling Text Container */}
+                <div className="relative h-[24px] overflow-hidden mr-6 flex items-center">
+                  <div className="flex flex-col transition-transform duration-500 ease-in-out group-hover:-translate-y-[24px]">
+                    <span className="h-[24px] flex items-center tracking-tight whitespace-nowrap">View Portfolio</span>
+                    <span className="h-[24px] flex items-center tracking-tight whitespace-nowrap text-[#222629]">View Portfolio</span>
+                  </div>
+                </div>
+
+                {/* Dark Circular Arrow Container */}
+                <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#222629] text-[#86C232] transition-transform duration-300 group-hover:scale-105">
+                  <ArrowUpRight size={20} strokeWidth={2.5} className="transition-transform duration-300 group-hover:rotate-45" />
                 </span>
               </Link>
               
@@ -81,20 +90,20 @@ export default function TestimonialStickySection(): React.ReactElement {
           </div>
 
           {/* ── RIGHT COLUMN: Scrolling Cards ── */}
-          <div className="lg:w-7/12 flex flex-col gap-8 md:gap-12">
-            {TESTIMONIALS.map((testimonial, index) => (
+          <div className="lg:w-7/12 flex flex-col gap-8 md:gap-12 w-full">
+            {TESTIMONIALS.map((testimonial) => (
               <motion.div
                 key={testimonial.id}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
-                className="bg-white rounded-[32px] p-8 md:p-12 shadow-[0_15px_50px_-15px_rgba(0,0,0,0.05)] border border-[#474B4F]/5 relative overflow-hidden group hover:border-[#86C232]/30 transition-colors duration-500"
+                className="bg-white rounded-[10px] p-8 md:p-12 border border-[#474B4F]/5 relative overflow-hidden group hover:border-[#86C232] hover:border-2 transition-all duration-300 w-full"
               >
                 <Quote size={140} className="absolute -top-6 -right-6 text-[#86C232]/5 group-hover:text-[#86C232]/10 transition-colors duration-500 rotate-180 pointer-events-none" fill="currentColor" strokeWidth={0} />
 
                 {/* Logo Container */}
-                <div className="w-[120px] h-[120px] md:w-[160px] md:h-[160px] bg-[#F8FAF8] rounded-[20px] flex items-center justify-center border border-black/5 mb-8 p-4">
+                <div className="w-[120px] h-[120px] md:w-[160px] md:h-[160px] bg-[#F8FAF8] rounded-[10px] flex items-center justify-center border border-black/5 mb-8 p-4">
                   <img
                     src={testimonial.logo}
                     alt={`${testimonial.name} Logo`}

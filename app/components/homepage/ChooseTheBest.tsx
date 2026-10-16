@@ -102,7 +102,7 @@ export default function ChooseBestSection(): React.ReactElement {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="lg:col-span-7 relative overflow-hidden rounded-[24px] border border-[#86C232]/30 min-h-[480px]"
+            className="lg:col-span-7 relative overflow-hidden rounded-[10px] border border-[#86C232]/30 min-h-[480px]"
           >
             <img
               src={STATIC_IMAGE}
@@ -129,7 +129,7 @@ export default function ChooseBestSection(): React.ReactElement {
                 <div
                   key={feature.id}
                   onClick={() => setActiveIndex(index)}
-                  className={`group relative flex flex-col justify-center p-5 sm:p-6 rounded-[18px] cursor-pointer transition-all duration-300 border ${
+                  className={`group relative flex flex-col justify-center p-5 sm:p-6 rounded-[10px] cursor-pointer transition-all duration-300 border ${
                     isSelected
                       ? "bg-[#222629] text-white border-[#222629] shadow-xl md:translate-x-[-10px]"
                       : "bg-white text-[#222629] border-[#86C232]/20 hover:border-[#86C232]/50 hover:bg-[#F8FAF8]"

@@ -55,7 +55,7 @@ export default function WhyWexoraaSection(): React.ReactElement {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
-            <span className="inline-block text-[#86C232] border border-[#86C232]/80 bg-[#86C232]/10 px-[14px] py-[4px] rounded-[4px] text-[12px] md:text-[14px] font-extrabold tracking-[0.2em] uppercase mb-4 shadow-sm select-none">
+            <span className="inline-block text-[#86C232] border border-[#86C232]/80 bg-[#86C232]/10 px-[14px] py-[4px] rounded-[4px] text-[12px] md:text-[14px] font-extrabold tracking-[0.2em] uppercase mb-4 select-none">
               Why Wexoraa
             </span>
             <h2 className="text-[#222629] text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.15]">
@@ -79,15 +79,14 @@ export default function WhyWexoraaSection(): React.ReactElement {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
                 className={`
-                  group relative rounded-[24px] p-8 md:p-10 transition-all duration-500 overflow-hidden
-                  bg-[#F8FAF8] border border-[#86C232]/10
-                  hover:bg-gradient-to-br hover:from-[#F8FAF8] hover:to-[#86C232]/10 
-                  hover:border-[#86C232]/40 hover:shadow-[0_15px_40px_-15px_rgba(134,194,50,0.3)] hover:-translate-y-1
+                  group relative rounded-[10px] p-8 md:p-10 transition-all duration-300 overflow-hidden
+                  bg-[#F8FAF8] border border-[#474B4F]/5
+                  hover:border-[#86C232] hover:border-2 hover:-translate-y-1
                   ${item.colSpan}
                 `}
               >
                 {/* Icon Box */}
-                <div className="relative z-10 w-14 h-14 rounded-full bg-white border border-[#474B4F]/10 flex items-center justify-center text-[#86C232] mb-6 shadow-sm group-hover:scale-110 group-hover:bg-[#86C232] group-hover:text-white transition-all duration-500">
+                <div className="relative z-10 w-14 h-14 rounded-[10px] bg-white border border-black/5 flex items-center justify-center text-[#86C232] mb-6 group-hover:scale-110 group-hover:bg-[#86C232] group-hover:text-white transition-all duration-500">
                   <Icon size={26} strokeWidth={2} />
                 </div>
                 
@@ -100,7 +99,7 @@ export default function WhyWexoraaSection(): React.ReactElement {
                   {item.desc}
                 </p>
 
-                {/* Decorative Check Icon in background - Boosted opacity and scale on hover */}
+                {/* Decorative Check Icon in background */}
                 <div className="absolute -bottom-6 -right-6 text-[#86C232]/5 group-hover:text-[#86C232]/20 group-hover:scale-110 transition-all duration-700 pointer-events-none">
                   <CheckCircle2 size={160} strokeWidth={1} />
                 </div>

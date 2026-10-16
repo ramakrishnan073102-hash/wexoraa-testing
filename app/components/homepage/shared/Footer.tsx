@@ -37,7 +37,7 @@ const SOCIALS = [
 
 const CONTACTS = [
   { icon: Phone, text: "STV Nagar, Nava India,  Peelamedu, Coimbatore - 641004", href: "#" },
-  { icon: Mail, text: "info@wexoraa.com", href: "mailto:info@wexoraa.com" },
+  { icon: Mail, text: "wexoraainfotech@gmail.com", href: "mailto:wexoraainfotech@gmail.com" },
 ];
 
 // --- SUBCOMPONENTS ---
@@ -71,7 +71,7 @@ export default function Footer(): React.ReactElement {
         <div className="relative z-10 max-w-[1340px] mx-auto px-5 sm:px-6 lg:px-8 pt-16 md:pt-28 pb-10">
           
           {/* CTA BANNER */}
-          <div className="relative overflow-hidden rounded-[20px] md:rounded-[24px] mb-16 md:mb-24 min-h-[320px] md:min-h-[450px] flex flex-col items-center justify-center bg-[#F2F6F3]">
+          <div className="relative overflow-hidden rounded-[20px] md:rounded-[10px] mb-16 md:mb-24 min-h-[320px] md:min-h-[450px] flex flex-col items-center justify-center bg-[#F2F6F3]">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] h-[400px] md:h-[500px] bg-[#86C232]/20 blur-[90px] md:blur-[120px] rounded-full pointer-events-none z-0" />
             <div className="relative z-30 flex flex-col items-center text-center p-6 sm:p-12 w-full">
               <h2 className="text-[#222629] text-[2.5rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] font-black leading-[1.1] tracking-tight max-w-[1000px] mx-auto mb-8 md:mb-10 select-none cursor-default">
